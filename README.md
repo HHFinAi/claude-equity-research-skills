@@ -156,6 +156,95 @@ earnings-analysis → corporate-network-analysis → competitive-analysis
 *Diagnose the print → check for insider/network signals → re-score the moat.*
 
 ---
+How to Use This Skill
+
+In Claude.ai (recommended starting point)
+
+This is the simplest way to get started. No terminal or coding experience is required. There are two approaches, depending on whether you want the skill available everywhere or only within a specific project.
+
+Option A: Install account-wide via Customize (recommended)
+
+This makes the skill available in all your conversations and in Cowork.
+
+Download this repository as a ZIP file (on the repository's main page, click the green Code button, then Download ZIP).
+
+Open claude.ai. In the left sidebar, click Customize (the toolbox icon), then go to Skills.
+
+Click the + button, then + Create skill, and upload the ZIP file.
+
+The skill will appear in your Skills list. Make sure its toggle is turned on.
+
+Start any conversation and ask Claude to review your writing. For example:
+
+Review the writing quality of my manuscript. Here is the Introduction section:
+
+[paste your text]
+Claude will recognize that the request matches the skill, load it, and produce a structured review report with specific findings and suggested revisions. You can also upload your manuscript as a PDF or paste individual sections.
+
+Note: The ZIP file must contain the skill folder at the root level. If your ZIP contains sciwrite/SKILL.md (not just a loose SKILL.md), you're set.
+Option B: Add to a specific Project's knowledge base
+
+If you prefer to limit the skill to a particular project (for example, a project dedicated to a specific manuscript):
+
+Download the SKILL.md file from this repository.
+Open or create a Project in Claude.ai.
+In the Project's knowledge base, click Add content and upload the SKILL.md file.
+Start a conversation inside that Project and ask Claude to review your writing.
+This approach keeps the skill scoped to one project, which is useful if you are working on multiple manuscripts with different conventions.
+
+In Claude Code (terminal agent)
+
+Place SKILL.md in .claude/skills/manuscript-review/ inside your manuscript project directory, then launch Claude Code and ask for a review. See HOW-TO-USE.md for full setup instructions, example prompts, and tips for each review mode.
+
+In Claude's Cowork (desktop agent)
+
+If you installed the skill account-wide via Customize (Option A above), it is already available in Cowork—no additional setup needed.
+
+If you prefer to work with the file directly, you can also place the SKILL.md file in the folder you point Cowork at (or in a subfolder). Then ask Cowork to review a manuscript file in that same folder:
+
+Review the writing quality of the manuscript draft in this folder.
+In ChatGPT
+
+Because OpenAI has adopted the Agent Skills standard, you can use this skill in ChatGPT through a Custom GPT:
+
+Open the SKILL.md file and copy its full contents (everything below the closing --- of the header).
+Go to chat.openai.com, click your profile icon, then My GPTs → Create a GPT.
+In the Configure tab, paste the contents of the skill into the Instructions field. You may also want to add the YAML header's description text at the top so the GPT knows when to apply these instructions.
+Name the GPT something like "SciWrite Reviewer" and save it.
+Open the GPT and paste your manuscript text.
+The output format and reasoning will follow the same structure as in Claude.
+
+In Google Gemini
+
+Gemini does not yet natively support the SKILL.md format, but you can achieve a similar result using a Gem (Gemini's equivalent of a custom assistant):
+
+Open gemini.google.com and navigate to Gems (in the left sidebar, or via the Gem manager).
+Create a new Gem. In the instructions field, paste the full body of the SKILL.md file (everything after the YAML header).
+Save the Gem and open a conversation with it.
+Paste your manuscript text and ask for a writing review.
+General approach for any AI tool
+
+If your preferred AI tool is not listed above, the pattern is the same:
+
+Find the tool's mechanism for persistent instructions (custom assistants, system prompts, project instructions, or similar).
+Paste the contents of SKILL.md into that mechanism.
+Provide your manuscript text and ask for a review.
+The skill is plain Markdown with no dependencies on any specific platform. It works wherever you can give an AI tool a block of instructions to follow.
+
+Tips for Getting Good Results
+
+Provide enough text for context. A single isolated sentence is hard to review for keyword consistency or logical flow. A full section or chapter gives the skill enough material to identify patterns—repeated nominalizations, inconsistent terminology, or structural problems that span multiple paragraphs.
+
+Specify the review mode if you have a specific need. If you already know your weakness is passive voice, ask for a targeted review rather than a full pass. This produces faster, more focused feedback.
+
+Use the interactive mode for learning. The paragraph-by-paragraph mode shows before/after revisions with explanations — useful for building long-term writing habits, not just fixing a single draft.
+
+Review the output critically. The skill produces well-structured editorial feedback, but your domain expertise is the final quality check. Occasionally a "smothered verb" that the skill flags is actually the standard term in your field (e.g., "polymerization" is not a nominalization that needs fixing). Use your judgment.
+
+Iterate. If a suggested revision changes your intended meaning, tell the AI why and ask it to try again. The skill's structured reasoning means the AI can explain why it flagged a particular sentence, which makes it easy to have a productive back-and-forth.
+
+
+
 
 ## 🤝 Contributing
 
