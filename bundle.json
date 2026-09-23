@@ -1,0 +1,18 @@
+{
+  "skills": {
+    "growth-stock-analysis": "growth-stock-analysis",
+    "earnings-analysis": "earnings-analysis",
+    "competitive-analysis": "competitive-analysis",
+    "corporate-network-analysis": "corporate-network-analysis",
+    "supply-chain-pass-through": "supply-chain-pass-through",
+    "thematic-investment-research": "thematic-investment-research",
+    "investment-report-reader": "investment-report-reader"
+  },
+  "upstream": {
+    "earnings-analysis": {
+      "repository": "HHFinAi/earnings-analysis",
+      "commit": "f6d6b4bf00ff5de25015eca50cf03b7f59d0e5f4",
+      "version": "2.0.0"
+    }
+  }
+}
