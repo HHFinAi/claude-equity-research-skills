@@ -1,5 +1,7 @@
 # 📊 Claude Equity Research Skills
 
+> **Responsible AI:** Analyst-controlled research; verify evidence, disclose AI assistance and protect confidential information. [Policy and project-specific checks](RESPONSIBLE_AI.md).
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Claude](https://img.shields.io/badge/Built%20for-Claude-orange.svg)](https://claude.ai)
 [![Skills](https://img.shields.io/badge/Skills-7-blue.svg)](#-the-skills)
